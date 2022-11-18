@@ -26,10 +26,22 @@
 }
 
 body {
-	max-width: 1920px;
+	width: 100%;
 	margin: 0;
 	font-family: 'OpenSans';
 }
+
+h1 {
+	font-size: 45px;
+	line-height: 75px;
+}
+
+h2,
+h3 {
+	font-size: 20px;
+	margin: 0;
+}
+
 
 /* page */
 
@@ -37,9 +49,7 @@ body {
 /* header */
 
 .header {
-	max-width: 1920px;
-	height: 450px;
-	position: relative;
+	min-height: 450px;
 	margin-bottom: 60px;
 
 	background-color: #699999;
@@ -50,6 +60,8 @@ body {
 
 	text-transform: uppercase;
 	color: #fff;
+
+	position: relative;
 
 	z-index: 0;
 }
@@ -68,18 +80,16 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
-	padding-top: 45px;
+	padding: 35px 15px 0;
 }
 
 .logo {
-	min-width: 190px;
-	height: 45px;
-	margin-left: 30px;
+	width: 200px;
 }
 
 .header_nav {
@@ -87,7 +97,6 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	font-size: 13px;
-	margin-right: 25px;
 }
 
 .nav {
@@ -117,26 +126,17 @@ body {
 }
 
 .container_menu {
-	width: 85px;
-	height: 46px;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-
-	position: absolute;
-	right: 50px;
 }
 
 .menu_button {
 	width: 30px;
-	height: 20px;
+	height: 22px;
 	border: none;
-	padding: 0;
-
 	background-color: transparent;
-	font-size: 25px;
-	position: absolute;
-	right: 0;
+
+	position: relative;
 
 	cursor: pointer;
 }
@@ -182,13 +182,9 @@ body {
 
 .header_title {
 	max-width: 685px;
-	padding-top: 75px;
-	margin-left: auto;
-	margin-right: auto;
-
+	margin: 80px auto 20px;
+	padding: 15px;
 	text-align: center;
-	font-size: 45px;
-	line-height: 75px;
 }
 
 /* header */
@@ -196,14 +192,11 @@ body {
 
 /* content */
 
-.content_section {
-	max-width: 1200px;
-	min-width: 360px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
 .content_title {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 45px;
+
 	position: relative;
 }
 
@@ -214,7 +207,6 @@ body {
 	color: #b59f5b;
 
 	position: absolute;
-	left: 565px;
 	top: -12px;
 }
 
@@ -232,56 +224,63 @@ body {
 
 .trends {
 	display: flex;
-	justify-content: center;
 }
 
 .trends_section {
-	/* width: 100%; */
-	margin-top: 30px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
 
 	position: relative;
+
+	z-index: 0;
 }
 
-.trends_section:nth-child(-1n+3) {
-	margin-right: 5px;
-}
-
-.trends_img {
-	width: 100%;
-}
-
-.trends_img:after {
+.trends_section:after {
 	content: "";
-	width: 100%;
-	height: 100%;
-	background-color: rgba(29, 29, 29, 0.45);
-
 	position: absolute;
+	background-color: #000;
+	opacity: 0.4;
+
 	top: 0;
+	bottom: 0;
+	right: 0;
 	left: 0;
 
-	z-index: 1;
-}
-
-.trends_img_item {
-	width: 100%;
-	display: block;
+	z-index: -1;
 }
 
 .trends_content {
 	width: 90%;
-	max-height: 200px;
 	box-sizing: border-box;
+	margin: 80px auto 15px;
+	padding: 15px 35px 25px 25px;
 	border: 2px solid #b59f5b;
-	padding: 25px;
-	margin-bottom: 20px;
-	position: absolute;
+}
 
-	z-index: 2;
+.trends_img {
+	background-color: #699999;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.trends_img1 {
+	background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend1.jpg');
+}
+
+.trends_img2 {
+	background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend2.jpg');
+}
+
+.trends_img3 {
+	background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend3.jpg');
+}
+
+.trends_img4 {
+	background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend4.jpg');
 }
 
 .trends_category {
@@ -293,7 +292,7 @@ body {
 
 	list-style: none;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 11px;
 	text-transform: uppercase;
 	color: #b59f5b;
 }
@@ -311,18 +310,14 @@ body {
 	text-decoration: underline;
 }
 
-.trends_title_custom {
-	margin: 0;
-}
-
 .trends_title {
 	display: block;
 
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #fff;
-	font-size: 17px;
-	line-height: 20px;
+	font-size: 14px;
+	line-height: 17px;
 
 	transition: 0.4s;
 }
@@ -334,47 +329,52 @@ body {
 /* trends */
 
 
+/* main/aside */
+
+.wrap_section {
+	max-width: 1170px;
+	display: flex;
+	justify-content: space-between;
+
+	padding: 0 15px;
+	margin: 60px auto;
+}
+
 /* main */
 
 .main {
-	max-width: 1200px;
 	display: flex;
 	box-sizing: border-box;
-
-	margin-left: auto;
-	margin-right: auto;
-
-	margin-top: 60px;
-	padding-right: 15px;
-	padding-left: 15px;
 }
 
 .post {
-	max-width: 778px;
+	margin-right: 30px;
 }
 
 .post_item {
 	display: flex;
+}
+
+.post_item:nth-child(-n+4) {
 	margin-bottom: 60px;
 }
 
 .post_item_img {
 	width: 100%;
-	max-width: 367px;
 	display: block;
 }
 
 .post_article {
-	max-width: 367px;
+	width: 42%;
 	margin-left: 30px;
 }
 
 .post_article_header {
-	padding-bottom: 38px;
+	margin-bottom: 38px;
 }
 
 .post_aritcle_category {
-	width: 367px;
+
 	display: flex;
 	flex-wrap: wrap;
 
@@ -389,7 +389,7 @@ body {
 }
 
 .aritcle_category_item:nth-child(n+1) {
-	padding-right: 15px;
+	padding-right: 20px;
 }
 
 .article_category_link {
@@ -403,22 +403,16 @@ body {
 
 .article_title {
 	display: block;
-
+	margin: 5px 0 25px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #000;
-	line-height: 25px;
 
 	transition: 0.4s;
 }
 
 .article_title:hover {
 	color: #b59f5b;
-}
-
-h1 {
-	font-size: 20px;
-	margin: 15px 0;
 }
 
 .article_time,
@@ -444,12 +438,10 @@ p {
 
 /* main */
 
-
 /* aside bar */
 
-.aside_bar {
+.aside_post {
 	width: 272px;
-	margin-left: 120px;
 }
 
 .aside_post:nth-child(n+2) {
@@ -457,6 +449,8 @@ p {
 }
 
 .aside_post_header {
+	display: flex;
+	justify-content: center;
 	position: relative;
 	margin-bottom: 45px;
 }
@@ -465,11 +459,10 @@ p {
 	content: '____';
 	font-size: 40px;
 	opacity: 0.5;
+	color: #b59f5b;
 
 	position: absolute;
-	left: 101px;
 	top: -17px;
-	color: #b59f5b;
 }
 
 .aside_post_name {
@@ -508,6 +501,7 @@ p {
 }
 
 .aside_title {
+	font-size: 14px;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.4s;
@@ -521,7 +515,6 @@ h5 {
 .aside_title:hover {
 	color: #b59f5b;
 }
-
 
 /* search/e-mail*/
 
@@ -575,7 +568,7 @@ input:focus {
 }
 
 .e-mail_button {
-	width: 272px;
+	width: 100%;
 	height: 50px;
 
 	margin-top: 15px;
@@ -594,7 +587,6 @@ input:focus {
 
 /* search/e-mail*/
 
-
 /* tags */
 
 .tags {
@@ -610,7 +602,7 @@ input:focus {
 	margin-top: 5px;
 	margin-right: 5px;
 	border: 2px solid #f4f7f6;
-	padding: 6px 14px;
+	padding: 5px 13px;
 
 	text-transform: uppercase;
 	font-size: 12px;
@@ -630,7 +622,6 @@ input:focus {
 }
 
 /* tags */
-
 
 /* catigories */
 
@@ -671,49 +662,16 @@ input:focus {
 
 /* catigories */
 /* aside bar */
+/* main/aside */
 
 
 /* shop */
 
-.shop {
-	max-width: 1200px;
-	box-sizing: border-box;
+.contents_shop_section {
+	max-width: 1170px;
 
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-	margin-right: auto;
-	margin-left: auto;
-
-	margin-bottom: 60px;
-
-	padding-right: 15px;
-	padding-left: 15px;
-}
-
-.shop_section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.shop_content {
-	max-width: 305px;
-	border: 2px solid #b59f5b;
-	padding: 50px 20px 20px;
-
-	flex-grow: 1;
-}
-
-.shop_img {
-	width: 100%;
-
-	position: relative;
-	top: 35px;
-
-	z-index: -1;
+	padding: 0 15px;
+	margin: 0 auto 30px;
 }
 
 .shop_title {
@@ -721,13 +679,39 @@ input:focus {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #000;
-	line-height: 25px;
+	margin: 5px 0;
 
 	transition: 0.4s;
 }
 
-.shop_content_title {
-	margin: 0;
+.shop {
+	display: flex;
+	flex-direction: row;
+}
+
+.shop_section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.shop_img {
+	width: 90%;
+}
+
+.shop_img_item {
+	width: 100%;
+}
+
+.shop_content {
+	border: 2px solid #b59f5b;
+	padding: 50px 20px 20px;
+
+	position: relative;
+	bottom: 30px;
+
+	flex-grow: 1;
 }
 
 .shop_title:hover {
@@ -735,6 +719,7 @@ input:focus {
 }
 
 .shop_content_custom {
+	font-size: 16px;
 	margin: 0;
 }
 
@@ -800,17 +785,14 @@ input:focus {
 
 .article_footer {
 	max-width: 1170px;
-	height: 80px;
-	padding-left: 15px;
-	padding-right: 15px;
-
-	margin-right: auto;
 	margin-left: auto;
+	margin-right: auto;
+
+	padding: 0 15px;
 }
 
 .container_footer {
-	padding-top: 42px;
-	padding-bottom: 42px;
+	padding: 42px 0;
 	background-color: #f4f7f6;
 	opacity: 0.6;
 }
@@ -858,6 +840,7 @@ input:focus {
 }
 
 .copy_footer {
+	max-width: 1200px;
 	padding-top: 73px;
 	padding-bottom: 40px;
 	text-align: center;
@@ -965,17 +948,16 @@ input:focus {
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .pupup_title::after {
 	content: '____';
 	font-size: 40px;
 	opacity: 0.5;
+	color: #b59f5b;
 
 	position: absolute;
-	left: 40%;
-	top: 5px;
-	color: #b59f5b;
 }
 
 .pupup_section:nth-child(n+2) {
@@ -1068,49 +1050,22 @@ input:focus {
 /* pupup */
 
 
-/* up_btn */
+/* mobile first */
 
-.up-button {
-	width: 40px;
-	height: 33px;
-
-	position: fixed;
-	bottom: 15%;
-	right: 7%;
-	opacity: 0.1;
-	background-repeat: no-repeat;
-	background-size: 40px;
-	background-image: url('https://cdn4.iconfinder.com/data/icons/basic-ui/512/ui-26-512.png');
-}
-
-@media (max-width: 1470px) {
-	.up-button {
-		display: none;
-	}
-}
-
-/* up_btn */
-
-
-/* desktop first */
-
-@media (orientation:landscape) {
-	.trends {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.trends_section {
-		width: 49%;
-	}
-
-}
 
 /* desktop */
 
 @media (min-width: 1200px) {
 	.container_menu {
 		display: none;
+	}
+
+	.trends_section:nth-child(-n+3) {
+		margin-right: 5px;
+	}
+
+	.shop_section:nth-child(n+2) {
+		padding-left: 30px;
 	}
 
 }
@@ -1120,117 +1075,183 @@ input:focus {
 
 /* tablet */
 
+@media (max-width: 1199px) and (min-width: 641px) {
+	.header {
+		background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-bg-tablet.jpg');
+	}
+
+	.shop_section:nth-child(2n+2) {
+		padding-left: 30px;
+	}
+
+	.trends_content {
+		padding-left: 35px;
+	}
+
+}
+
+
 @media (max-width: 1199px) {
 	.header_nav {
 		display: none;
 	}
 
+	.header {
+		min-height: 400px;
+	}
+
+	.container {
+		padding: 40px 30px 0;
+	}
+
+	.logo {
+		width: 165px;
+	}
+
+	.header_title {
+		max-width: 650px;
+		font-size: 40px;
+		line-height: 50px;
+	}
+
 	.trends {
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	.trends_section {
-		width: 49%;
-		margin-left: 0;
-	}
-
-	.trends_section:nth-child(-1n+3) {
-		margin-right: 0;
-	}
-
-	.trends_section:nth-child(odd) {
-		margin-right: 5px;
+		width: 49.6%;
 	}
 
 	.trends_section:nth-child(n+3) {
 		margin-top: 5px;
 	}
 
-	.post {
-		width: 70%;
+
+	.trends_category {
+		font-size: 14px;
 	}
 
-}
-
-
-@media (max-width: 1199px) and (min-width: 641px) {
-	.header {
-		background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-bg-tablet.jpg');
+	.trends_title {
+		font-size: 17px;
+		line-height: 22px;
 	}
 
-	.content_title {
-		max-width: 641px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.content_title::after {
-		left: 285px;
-	}
-
-	.aside_bar {
-		margin-left: 50px;
-	}
-
-}
-
-
-@media (max-width: 1108px) {
-	.shop {
-		max-width: 756px;
-	}
-
-}
-
-
-@media (max-width: 1100px) {
-	.main {
-		width: 100%;
-	}
-
-	.post {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.post_article {
-		margin-left: 0;
-	}
-
-	.post_article_header {
-		padding: 0;
-	}
-
-	.post_aritcle_category {
-		margin-top: 10px;
+	.wrap_section {
+		padding: 0 30px;
 	}
 
 	.post_item {
 		flex-direction: column;
 	}
 
-	.aside_bar {
-		margin-left: 20px;
+	.post_article {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.post_aritcle_category {
+		margin-top: 10px;
+	}
+
+	.article_title {
+		font-size: 17px;
+	}
+
+	.shop {
+		flex-wrap: wrap;
+	}
+
+	.shop_section {
+		width: calc(50% - 15px);
+	}
+
+	.shop_content {
+		width: calc(100% - 45px);
+	}
+
+	.shop_content_custom {
+		font-size: 15px;
+	}
+
+	.contents_shop_section {
+		padding: 0 30px;
+	}
+
+	.article_footer {
+		padding: 0 30px;
+	}
+
+}
+
+/* tablet */
+
+
+/* mobile */
+
+@media (max-width: 640px) and (orientation: landscape) {
+	.trends {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.trends_section {
+		width: 49.6%;
 	}
 
 }
 
 
-@media (max-width: 790px) {
+@media (max-width: 640px) {
+	.page {
+		min-width: 344px;
+	}
+
+	.header {
+		background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-mobile.jpg');
+		min-height: 658px;
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.header_title {
-		max-width: 610px;
-		padding-top: 90px;
-		font-size: 40px;
-		line-height: 50px;
+		max-width: 340px;
+		font-size: 25px;
+		line-height: 35px;
+		margin: 10px auto;
 	}
 
-}
+	.logo {
+		width: 260px;
+	}
 
+	.container_menu {
+		position: absolute;
+		top: 40px;
+		right: 20px;
+	}
 
-@media (max-width: 750px) {
+	.content_title {
+		margin-bottom: 40px;
+	}
+
+	.content_title_item {
+		font-size: 17px;
+	}
+
+	.content_title::after {
+		top: -17px;
+	}
+
 	.trends {
 		flex-direction: column;
+	}
+
+	.trends_title {
+		font-size: 15px;
+		line-height: 19px;
 	}
 
 	.trends_section {
@@ -1241,96 +1262,57 @@ input:focus {
 		margin-top: 5px;
 	}
 
-	.post {
-		width: 100%;
-	}
-
-	.shop {
-		flex-direction: column;
-	}
-
-}
-
-
-@media (max-width: 673px) {
-	.main {
+	.wrap_section {
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 60px;
+		padding: 0 15px;
 	}
 
-	.aside_bar {
+	.post {
 		margin: 0;
 	}
 
-}
-
-/* tablet */
-
-
-/* mobile */
-
-@media (max-width: 640px) {
-	.page {
-		min-width: 344px;
-	}
-
-	.header {
-		background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-mobile.jpg');
-		height: 658px;
-	}
-
-	.header_title {
-		max-width: 400px;
-		padding-top: 30px;
-		font-size: 35px;
-	}
-
-	.logo {
-		min-width: 250px;
-		margin-left: 0;
-		padding-top: 190px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.content_title {
-		max-width: 360px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.content_title::after {
-		left: 148px;
-	}
-
-	.post {
+	.post_item_img {
 		width: 100%;
+	}
+
+	.post_article_header {
+		margin-bottom: 20px;
+	}
+
+	.contents_shop_section {
+		padding: 0 15px;
+	}
+
+	.aside_bar {
+		width: 100%;
+		margin-top: 60px;
+	}
+
+	.aside_post {
+		width: 100%;
+	}
+
+	.aside_post_name {
+		font-size: 17px;
+	}
+
+	.shop_section {
+		width: 100%;
+	}
+
+	.article_footer {
+		padding: 0 15px;
 	}
 
 	.article_title {
 		font-size: 17px;
-	}
-
-	.shop {
-		width: 100%;
-	}
-
-}
-
-
-@media (max-width: 420px) {
-	.header_title {
-		max-width: 340px;
-		font-size: 25px;
-		line-height: 35px;
-	}
-
-	.post_item {
-		width: 100%;
+		margin: 5px 0 20px;
 	}
 
 }
 
 /* mobile */
-/* desktop first */
+
+
+/* mobile first */
