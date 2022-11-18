@@ -26,7 +26,7 @@
 }
 
 body {
-	width: 100%;
+	max-width: 1920px;
 	margin: 0;
 	font-family: 'OpenSans';
 }
@@ -37,8 +37,7 @@ body {
 /* header */
 
 .header {
-	max-width: 100%;
-	min-width: 1200px;
+	max-width: 1920px;
 	height: 450px;
 	position: relative;
 	margin-bottom: 60px;
@@ -78,7 +77,7 @@ body {
 }
 
 .logo {
-	width: 190px;
+	min-width: 190px;
 	height: 45px;
 	margin-left: 30px;
 }
@@ -117,6 +116,70 @@ body {
 	text-decoration: underline;
 }
 
+.container_menu {
+	width: 85px;
+	height: 46px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	position: absolute;
+	right: 50px;
+}
+
+.menu_button {
+	width: 30px;
+	height: 20px;
+	border: none;
+	padding: 0;
+
+	background-color: transparent;
+	font-size: 25px;
+	position: absolute;
+	right: 0;
+
+	cursor: pointer;
+}
+
+.menu_button:hover {
+	transition: 0.3s;
+	transform: scale(1.12);
+}
+
+.menu_button:before,
+.menu_button:after {
+	content: "";
+	width: 100%;
+	height: 17%;
+
+	border-radius: 5px;
+	background-color: #ffffff;
+
+	position: absolute;
+	left: 0;
+}
+
+.menu_button:before {
+	top: 0;
+}
+
+.menu_button:after {
+	bottom: 0;
+}
+
+.menu_button_label {
+	width: 100%;
+	height: 17%;
+	margin-top: -2px;
+
+	border-radius: 5px;
+	background-color: #ffffff;
+
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+
 .header_title {
 	max-width: 685px;
 	padding-top: 75px;
@@ -134,7 +197,8 @@ body {
 /* content */
 
 .content_section {
-	width: 1200px;
+	max-width: 1200px;
+	min-width: 360px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -167,12 +231,12 @@ body {
 /* trends */
 
 .trends {
-	max-width: 1920px;
 	display: flex;
+	justify-content: center;
 }
 
 .trends_section {
-	width: 100%;
+	/* width: 100%; */
 	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
@@ -182,8 +246,8 @@ body {
 	position: relative;
 }
 
-.trends_section:nth-child(n+2) {
-	margin-left: 5px;
+.trends_section:nth-child(-1n+3) {
+	margin-right: 5px;
 }
 
 .trends_img {
@@ -273,19 +337,20 @@ body {
 /* main */
 
 .main {
-	width: 1200px;
+	max-width: 1200px;
 	display: flex;
 	box-sizing: border-box;
 
-	margin-top: 60px;
-	margin-right: auto;
 	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 60px;
 	padding-right: 15px;
 	padding-left: 15px;
 }
 
 .post {
-	width: 778px;
+	max-width: 778px;
 }
 
 .post_item {
@@ -294,12 +359,13 @@ body {
 }
 
 .post_item_img {
-	min-width: 382px;
-	min-height: 295px;
+	width: 100%;
+	max-width: 367px;
+	display: block;
 }
 
 .post_article {
-	width: 367px;
+	max-width: 367px;
 	margin-left: 30px;
 }
 
@@ -610,7 +676,7 @@ input:focus {
 /* shop */
 
 .shop {
-	width: 1200px;
+	max-width: 1200px;
 	box-sizing: border-box;
 
 	display: flex;
@@ -634,7 +700,7 @@ input:focus {
 }
 
 .shop_content {
-	width: 305px;
+	max-width: 305px;
 	border: 2px solid #b59f5b;
 	padding: 50px 20px 20px;
 
@@ -733,7 +799,7 @@ input:focus {
 /* footer */
 
 .article_footer {
-	width: 1170px;
+	max-width: 1170px;
 	height: 80px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -843,9 +909,15 @@ input:focus {
 .pupup {
 	width: 100%;
 	height: 100vh;
+	min-width: 330px;
+	box-sizing: border-box;
 	position: fixed;
 	top: 0;
 	left: 0;
+
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
 
 	justify-content: center;
 	align-items: center;
@@ -853,7 +925,6 @@ input:focus {
 	background-color: rgba(0, 0, 0, 0.7);
 
 	display: none;
-
 	z-index: 2;
 }
 
@@ -1019,3 +1090,247 @@ input:focus {
 }
 
 /* up_btn */
+
+
+/* desktop first */
+
+@media (orientation:landscape) {
+	.trends {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.trends_section {
+		width: 49%;
+	}
+
+}
+
+/* desktop */
+
+@media (min-width: 1200px) {
+	.container_menu {
+		display: none;
+	}
+
+}
+
+/* desktop */
+
+
+/* tablet */
+
+@media (max-width: 1199px) {
+	.header_nav {
+		display: none;
+	}
+
+	.trends {
+		flex-wrap: wrap;
+	}
+
+	.trends_section {
+		width: 49%;
+		margin-left: 0;
+	}
+
+	.trends_section:nth-child(-1n+3) {
+		margin-right: 0;
+	}
+
+	.trends_section:nth-child(odd) {
+		margin-right: 5px;
+	}
+
+	.trends_section:nth-child(n+3) {
+		margin-top: 5px;
+	}
+
+	.post {
+		width: 70%;
+	}
+
+}
+
+
+@media (max-width: 1199px) and (min-width: 641px) {
+	.header {
+		background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-bg-tablet.jpg');
+	}
+
+	.content_title {
+		max-width: 641px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content_title::after {
+		left: 285px;
+	}
+
+	.aside_bar {
+		margin-left: 50px;
+	}
+
+}
+
+
+@media (max-width: 1108px) {
+	.shop {
+		max-width: 756px;
+	}
+
+}
+
+
+@media (max-width: 1100px) {
+	.main {
+		width: 100%;
+	}
+
+	.post {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.post_article {
+		margin-left: 0;
+	}
+
+	.post_article_header {
+		padding: 0;
+	}
+
+	.post_aritcle_category {
+		margin-top: 10px;
+	}
+
+	.post_item {
+		flex-direction: column;
+	}
+
+	.aside_bar {
+		margin-left: 20px;
+	}
+
+}
+
+
+@media (max-width: 790px) {
+	.header_title {
+		max-width: 610px;
+		padding-top: 90px;
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+}
+
+
+@media (max-width: 750px) {
+	.trends {
+		flex-direction: column;
+	}
+
+	.trends_section {
+		width: 100%;
+	}
+
+	.trends_section:nth-child(n+2) {
+		margin-top: 5px;
+	}
+
+	.post {
+		width: 100%;
+	}
+
+	.shop {
+		flex-direction: column;
+	}
+
+}
+
+
+@media (max-width: 673px) {
+	.main {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 60px;
+	}
+
+	.aside_bar {
+		margin: 0;
+	}
+
+}
+
+/* tablet */
+
+
+/* mobile */
+
+@media (max-width: 640px) {
+	.page {
+		min-width: 344px;
+	}
+
+	.header {
+		background-image: url('https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-mobile.jpg');
+		height: 658px;
+	}
+
+	.header_title {
+		max-width: 400px;
+		padding-top: 30px;
+		font-size: 35px;
+	}
+
+	.logo {
+		min-width: 250px;
+		margin-left: 0;
+		padding-top: 190px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content_title {
+		max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content_title::after {
+		left: 148px;
+	}
+
+	.post {
+		width: 100%;
+	}
+
+	.article_title {
+		font-size: 17px;
+	}
+
+	.shop {
+		width: 100%;
+	}
+
+}
+
+
+@media (max-width: 420px) {
+	.header_title {
+		max-width: 340px;
+		font-size: 25px;
+		line-height: 35px;
+	}
+
+	.post_item {
+		width: 100%;
+	}
+
+}
+
+/* mobile */
+/* desktop first */

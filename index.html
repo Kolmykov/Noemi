@@ -42,6 +42,14 @@
 					</ul>
 					<label class="nav_pupup" for="modal">?</label>
 				</nav>
+
+				<div class="container_menu">
+					<label class="nav_pupup" for="modal">?</label>
+					<button class="menu_button">
+						<span class="menu_button_label"></span>
+						<span class="visually-hidden">открыть меню</span>
+					</button>
+				</div>
 			</div>
 			<h1 class="header_title">блог о творчестве, спотре, и образе жизни</h1>
 		</header>
@@ -145,8 +153,9 @@
 		<main class="main">
 			<div class="post">
 				<section class="post_item">
-					<picture class="post_item_img">
-						<img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="10 мест"
+					<picture>
+						<img class="post_item_img"
+							src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="10 мест"
 							title="10 мест">
 					</picture>
 					<article class="post_article">
@@ -171,8 +180,9 @@
 				</section>
 
 				<section class="post_item">
-					<picture class="post_item_img">
-						<img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" alt="йога"
+					<picture>
+						<img class="post_item_img"
+							src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" alt="йога"
 							title="йога">
 					</picture>
 					<article class="post_article">
@@ -197,8 +207,9 @@
 				</section>
 
 				<section class="post_item">
-					<picture class="post_item_img">
-						<img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" alt="музыка"
+					<picture>
+						<img class="post_item_img"
+							src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" alt="музыка"
 							title="музыка">
 					</picture>
 					<article class="post_article">
@@ -222,9 +233,10 @@
 				</section>
 
 				<section class="post_item">
-					<picture class="post_item_img">
-						<img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg"
-							alt="кулинария" title="кулинария">
+					<picture>
+						<img class="post_item_img"
+							src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="кулинария"
+							title="кулинария">
 					</picture>
 					<article class="post_article">
 						<header class="post_article_header">
@@ -248,8 +260,9 @@
 				</section>
 
 				<section class="post_item">
-					<picture class="post_item_img">
-						<img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" alt="интерьер"
+					<picture>
+						<img class="post_item_img"
+							src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" alt="интерьер"
 							title="интерьер">
 					</picture>
 					<article class="post_article">
@@ -421,31 +434,26 @@
 							<a class="catigories_link" href="#0">Красота
 								<span class="catigories_number">12</span>
 							</a>
-
 						</li>
 						<li class="catigories_item">
 							<a class="catigories_link" href="#0">Здровье
 								<span class="catigories_number">4</span>
 							</a>
-
 						</li>
 						<li class="catigories_item">
 							<a class="catigories_link" href="#0">Образ жизни
 								<span class="catigories_number">145</span>
 							</a>
-
 						</li>
 						<li class="catigories_item">
 							<a class="catigories_link" href="#0">Музыка
 								<span class="catigories_number">28</span>
 							</a>
-
 						</li>
 						<li class="catigories_item">
 							<a class="catigories_link" href="#0">Спорт
 								<span class="catigories_number">62</span>
 							</a>
-
 						</li>
 						<li class="catigories_item">
 							<a class="catigories_link" href="#0">Йога
@@ -472,6 +480,10 @@
 		<div class="shop">
 			<section class="shop_section">
 				<picture>
+					<source media="(max-width:1199px) and (min-width:641px)"
+						srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet1.jpg">
+					<source media="(max-width:640px)"
+						srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile1.jpg">
 					<img class="shop_img"
 						src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk1.jpg"
 						alt="подушки на диван" title="подушки на диван">
@@ -501,17 +513,20 @@
 
 			<section class="shop_section">
 				<picture>
+					<source media="(max-width:1199px) and (min-width:641px)"
+						srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet2.jpg">
+					<source media="(max-width:640px)"
+						srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile2.jpg">
 					<img class="shop_img"
 						src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk2.jpg"
-						alt="подушки на диван" title="подушки на диван">
+						alt="кукла «зайчик»" title="кукла «зайчик»">
 				</picture>
 
 				<div class="shop_content">
 					<h1 class="shop_content_title"><a class="shop_title" href="#0">кукла «зайчик»</a></h1>
 					<p class="shop_content_custom">
 						Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="shop_content_link"
-							href="#0">весенняя серия постов</a> в блоге и
-						несколько подкастов.
+							href="#0">весенняя серия постов</a> в блоге и несколько подкастов.
 					</p>
 					<footer class="shop_footer">
 						<div class="shop_prices">
@@ -527,9 +542,13 @@
 
 			<section class="shop_section">
 				<picture>
+					<source media="(max-width:1199px) and (min-width:641px)"
+						srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet3.jpg">
+					<source media="(max-width:640px)"
+						srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile3.jpg">
 					<img class="shop_img"
 						src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk3.jpg"
-						alt="подушки на диван" title="подушки на диван">
+						alt="шестиугольная рамка" title="шестиугольная рамка">
 				</picture>
 
 				<div class="shop_content">
@@ -581,7 +600,6 @@
 				</address>
 			</div>
 
-
 			<div class="copy_footer">
 				<a class="copy_footer_link" href="#0">Copyright © 2009–2016 City Blog LLC.
 					<span class="visually-hidden">vkolm5@yandex.ru</span>
@@ -594,11 +612,9 @@
 		<!-- pupup -->
 		<input type="checkbox" class="pupup_toggle" id="modal">
 		<form class="pupup">
-
 			<label for="modal" class="pupup_close_background"></label>
 
 			<div class="pupup_content">
-
 				<label for="modal" class="pupup_close">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 441">
 						<path fill="#fff" stroke="#000"
@@ -606,7 +622,6 @@
 					</svg>
 					<span class="visually-hidden">Закрыть окно</span>
 				</label>
-
 				<div class="pupup_title">
 					<h1>ваш фидбек</h1>
 				</div>
